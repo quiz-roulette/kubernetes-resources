@@ -1,12 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f docker-compose.yml
-    kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: "2022-12-10T12:29:40Z"
-  labels:
-    io.kompose.service: quiz-roulette-admin-crud-app
   name: quiz-roulette-admin-crud-app
 spec:
   replicas: 1
@@ -16,10 +10,6 @@ spec:
   strategy: {}
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f docker-compose.yml
-        kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: "2022-12-10T12:29:40Z"
       labels:
         io.kompose.service: quiz-roulette-admin-crud-app
     spec:
