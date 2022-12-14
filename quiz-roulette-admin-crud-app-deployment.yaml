@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.22.0 (HEAD)
+  creationTimestamp: "2022-12-10T12:29:40Z"
+  labels:
+    io.kompose.service: quiz-roulette-admin-crud-app
+  name: quiz-roulette-admin-crud-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: quiz-roulette-admin-crud-app
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml
+        kompose.version: 1.22.0 (HEAD)
+      creationTimestamp: "2022-12-10T12:29:40Z"
+      labels:
+        io.kompose.service: quiz-roulette-admin-crud-app
+    spec:
+      containers:
+        - image: quizroulette/admin-crud-app:v1.1.0-RELEASE
+          name: quiz-roulette-admin-crud-app
+          ports:
+            - containerPort: 3000
+          resources: {}
+          env:
+            - name: REACT_APP_QUIZ_BANK_QUESTIONS_URL
+              value: "http://localhost:8080"
+              #value: "http://quiz-roulette-question-bank-graphql.default.svc.cluster.local:34000"
+            - name: REACT_APP_QUIZ_BANK_QUESTIONS_ENDPOINT
+              value: "/graphql"
+      restartPolicy: Always
+status: {}

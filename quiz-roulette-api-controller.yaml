@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: quiz-roulette-api-ingress
+spec:
+  rules:
+  - host: "kubernetes.docker.internal"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/question-bank-graphql"
+        backend:
+          service:          
+            name: quiz-roulette-question-bank-graphql
+            port: 
+              number: 34000
