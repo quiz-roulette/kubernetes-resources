@@ -21,7 +21,7 @@ spec:
           resources: {}
           env:
             - name: REACT_APP_QUIZ_BANK_QUESTIONS_URL
-              value: "http://localhost:8080"
+              value: "http://localhost:9999"
               #value: "http://quiz-roulette-question-bank-graphql.default.svc.cluster.local:34000"
             - name: REACT_APP_QUIZ_BANK_QUESTIONS_ENDPOINT
               value: "/graphql"
