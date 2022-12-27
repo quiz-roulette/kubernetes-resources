@@ -5,7 +5,7 @@ kubectl apply -f quiz-roulette-question-bank-graphql-deployment.yaml
 kubectl apply -f quiz-roulette-question-bank-graphql-service.yaml
 
 ### Ingress
-kubectl create -f https://raw.githubusercontent.com/Kong/kubernetes-ingress-controller/main/deploy/single/all-in-one-postgres.yaml
+kubectl create -f quiz-roulette-kong-manifest.yaml
 
 kubectl apply -f quiz-roulette-question-bank-ingress.yaml
 
