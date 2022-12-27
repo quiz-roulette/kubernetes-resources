@@ -14,7 +14,7 @@ spec:
         io.kompose.service: quiz-roulette-quiz-player-view-app
     spec:
       containers:
-        - image: quizroulette/quiz-player-view:v1.0.0
+        - image: quizroulette/quiz-player-view:v1.1.0
           name: quiz-player-view
           ports:
             - containerPort: 8080
