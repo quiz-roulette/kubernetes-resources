@@ -30,7 +30,15 @@ kubectl delete namespace kong
 kubectl delete deploy quiz-roulette-admin-crud-app
 kubectl delete deploy quiz-roulette-question-bank-graphql
 kubectl delete deploy quiz-roulette-quiz-player-view-app-deployment
+kubectl delete deploy quiz-transaction-deployment
+kubectl delete deploy user-service-deployment
+kubectl delete deploy legacy-service-deployment
+kubectl delete deploy player-game-deployment
 
 kubectl delete svc quiz-roulette-admin-crud-service
 kubectl delete svc quiz-roulette-question-bank-graphql
 kubectl delete svc quiz-roulette-quiz-player-view-app-service
+kubectl delete svc quiz-transaction-service
+kubectl delete svc user-service-service
+kubectl delete svc legacy-service-service
+kubectl delete svc player-game-service

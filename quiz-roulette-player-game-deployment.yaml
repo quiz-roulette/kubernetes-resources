@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: player-game-deployment
+  labels:
+    app: player-game
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: player-game
+  template:
+    metadata:
+      labels:
+        app: player-game
+    spec:
+      containers:
+      - name: player-game
+        image: quizroulette/player-game:v1.0.0
+        ports:
+        - containerPort: 3000

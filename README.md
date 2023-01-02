@@ -8,7 +8,6 @@ For Player view, please visit `localhost:8080` and For Admin view visit `localho
 
 To Stop `sh tear-down.sh` 
 
-
 ### 🌈 Contribution
 
 - Add the deployment yml
@@ -16,3 +15,10 @@ To Stop `sh tear-down.sh`
 - Update the setup file
 - Update the tear down file
 
+### References:
+
+To Get logs from Apps:
+
+`kubectl logs --selector app=legacy-service` 
+
+`kubectl logs --selector app=user-service`

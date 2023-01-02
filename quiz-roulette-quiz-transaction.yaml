@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quiz-transaction-deployment
+  labels:
+    app: quiz-transaction
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quiz-transaction
+  template:
+    metadata:
+      labels:
+        app: quiz-transaction
+    spec:
+      containers:
+      - name: quiz-transaction
+        image: quizroulette/quiz-transaction-service:v1.0.0
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quiz-transaction-service
+spec:
+  selector:
+    app: quiz-transaction
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

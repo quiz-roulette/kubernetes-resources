@@ -15,3 +15,10 @@ spec:
             name: quiz-roulette-question-bank-graphql
             port:
               number: 34000
+      - path: /legacy
+        pathType: Prefix
+        backend:
+          service:
+            name: legacy-service-service
+            port:
+              number: 8080
