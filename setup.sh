@@ -9,6 +9,8 @@ kubectl apply -f quiz-roulette-users-service.yaml
 
 kubectl apply -f quiz-roulette-legacy-service.yaml
 
+kubectl apply -f quiz-roulette-event-service.yaml
+
 ### Ingress
 kubectl create -f quiz-roulette-kong-manifest.yaml
 
@@ -23,6 +25,8 @@ kubectl apply -f quiz-roulette-question-bank-ingress.yaml
 
 kubectl apply -f quiz-roulette-player-game-deployment.yaml
 kubectl expose deployment player-game-deployment --type=LoadBalancer --name=player-game-service
+
+kubectl expose deployment event-service-deployment --type=LoadBalancer --name=event-service-service
 
 for i in `seq 1 10`;
 do

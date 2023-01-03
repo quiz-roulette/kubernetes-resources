@@ -34,6 +34,7 @@ kubectl delete deploy quiz-transaction-deployment
 kubectl delete deploy user-service-deployment
 kubectl delete deploy legacy-service-deployment
 kubectl delete deploy player-game-deployment
+kubectl delete deploy event-service-deployment
 
 kubectl delete svc quiz-roulette-admin-crud-service
 kubectl delete svc quiz-roulette-question-bank-graphql
@@ -42,3 +43,4 @@ kubectl delete svc quiz-transaction-service
 kubectl delete svc user-service-service
 kubectl delete svc legacy-service-service
 kubectl delete svc player-game-service
+kubectl delete svc event-service-service
