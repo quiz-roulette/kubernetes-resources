@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: quiz-transaction
+        logs_selector: backend
     spec:
       containers:
       - name: quiz-transaction

@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: user-service
+        logs_selector: backend
     spec:
       containers:
       - name: user-service

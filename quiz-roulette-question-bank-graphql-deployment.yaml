@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: quiz-roulette-question-bank-graphql
+        logs_selector: backend
     spec:
       containers:
         - image: quizroulette/question-bank-graphql:v2.2.1

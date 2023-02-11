@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: legacy-service
+        logs_selector: backend
     spec:
       containers:
       - name: legacy-service

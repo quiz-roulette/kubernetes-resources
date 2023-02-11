@@ -22,3 +22,9 @@ To Get logs from Apps:
 `kubectl logs --selector app=legacy-service` 
 
 `kubectl logs --selector app=user-service`
+
+To Get logs from all backend apps:
+
+```sh
+while true; do kubectl logs -l logs_selector=backend; sleep 1; done
+```
