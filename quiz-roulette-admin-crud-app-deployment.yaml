@@ -14,10 +14,10 @@ spec:
         io.kompose.service: quiz-roulette-admin-crud-app
     spec:
       containers:
-        - image: quizroulette/admin-crud-app:v1.1.0-RELEASE
+        - image: quizroulette/admin-crud-app:v2.2.0
           name: quiz-roulette-admin-crud-app
           ports:
-            - containerPort: 3000
+            - containerPort: 80
           resources: {}
           env:
             - name: REACT_APP_QUIZ_BANK_QUESTIONS_URL

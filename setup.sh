@@ -17,8 +17,8 @@ kubectl create -f quiz-roulette-kong-manifest.yaml
 kubectl apply -f quiz-roulette-question-bank-ingress.yaml
 
 ### Frontend
-#kubectl apply -f quiz-roulette-admin-crud-app-deployment.yaml
-#kubectl expose deployment quiz-roulette-admin-crud-app --type=LoadBalancer --name=quiz-roulette-admin-crud-service
+kubectl apply -f quiz-roulette-admin-crud-app-deployment.yaml
+kubectl expose deployment quiz-roulette-admin-crud-app --port=4200 --type=LoadBalancer --name=quiz-roulette-admin-crud-service
 
 #kubectl apply -f quiz-roulette-quiz-player-view-app-deployment.yaml
 #kubectl expose deployment quiz-roulette-quiz-player-view-app-deployment --type=LoadBalancer --name=quiz-roulette-quiz-player-view-app-service
