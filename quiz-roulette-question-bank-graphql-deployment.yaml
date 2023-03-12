@@ -17,7 +17,7 @@ spec:
         logs_selector: backend
     spec:
       containers:
-        - image: quizroulette/question-bank-graphql:v2.2.1
+        - image: quizroulette/question-bank-graphql:v2.2.2
           name: quiz-roulette-question-bank-graphql
           ports:
             - containerPort: 34000
